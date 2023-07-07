@@ -3,8 +3,20 @@
 
 N.B: Project explanation from this blog [https://prismaio.notion.site/Let-s-build-a-REST-API-with-NestJS-and-Prisma-94258f8a78d7460883d5b900f706e9ae]
 
+Up and running postgres database
+`docker-compose up --build`
+
+If database port already running then stop this port and container then docker-compose up again
+
+To do this task we need to run this command
+```
+sudo docker kill $(docker ps -q)
+sudo netstat -nlpt |grep 3306
+sudo kill <PID> ex: 33031
+```
+
 migrate prisma orm
-`prisma migrate dev --name initDatabase`
+`npx prisma migrate dev`
 
 generate prisma module and service
 ```

@@ -26,3 +26,9 @@ generate exception filter
 
 install dotenv-cli for end-to-end testing
 `npm i dotenv-cli --save-dev`
+
+for running end-to-end testing we first need to migrate database
+`npx prisma migrate dev`
+
+then run this command for test
+`npm run test:e2e`

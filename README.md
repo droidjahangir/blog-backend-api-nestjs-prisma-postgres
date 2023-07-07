@@ -39,6 +39,14 @@ generate exception filter
 install dotenv-cli for end-to-end testing
 `npm i dotenv-cli --save-dev`
 
+add this property to jest-e2e.json file
+```
+  "moduleDirectories": [
+    "<rootDir>/../",
+    "node_modules"
+  ]
+```
+
 for running end-to-end testing we first need to migrate database
 `npx prisma migrate dev`
 
